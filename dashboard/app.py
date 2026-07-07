@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+from pathlib import Path
 
 import numpy as np
 
@@ -128,20 +129,20 @@ st.caption("Developed by Narendra Suthar | Unified Mentor")
 
 @st.cache_data
 
+@st.cache_data
 def load_data():
 
-    df = pd.read_csv("../data/cleaned_uac_data.csv")
+    BASE_DIR = Path(__file__).resolve().parent.parent
+
+    DATA_FILE = BASE_DIR / "data" / "cleaned_uac_data.csv"
+
+    df = pd.read_csv(DATA_FILE)
 
     df["Date"] = pd.to_datetime(df["Date"])
 
     df["Year"] = df["Date"].dt.year
 
-    df["Month"] = df["Date"].dt.month_name()
-
-    df["Quarter"] = df["Date"].dt.quarter
-
     return df
-
 
 df = load_data()
 
