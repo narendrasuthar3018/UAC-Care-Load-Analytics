@@ -1,37 +1,242 @@
-# UAC System Capacity & Care Load Analytics
+# 🛡️ UAC Care System Analytics Dashboard
 
-**Project by**: Narendra Suthar  
-**Organization**: Unified Mentor  
-**Date**: July 2026
+An advanced interactive analytics dashboard built using **Python**, **Streamlit**, **Plotly**, and **Machine Learning** for analyzing the capacity and care load trends of the Unaccompanied Alien Children (UAC) Program.
 
-## 📋 Project Overview
+This project provides real-time insights into system load, forecasting, anomaly detection, executive reporting, and data export features through an interactive web dashboard.
 
-Yeh project U.S. Department of Health and Human Services (HHS) ke Unaccompanied Alien Children (UAC) Program ke liye banaya gaya hai. Isme system capacity, care load balance, pressure periods aur future forecasting ko monitor kiya gaya hai.
+---
 
-## 🎯 Key Features
+## 📌 Project Overview
 
-- Interactive Streamlit Dashboard
-- 90-Day Load Forecasting
-- Anomaly Detection System
-- Year-wise Comparison (2023, 2024, 2025)
-- Professional Reports & Insights
-- Data Processing & KPI Calculation
+The UAC Care System Analytics Dashboard helps analyze historical care system data by providing:
 
-## 📊 Major Insights
+- System load monitoring
+- Children in HHS care analysis
+- Net intake trends
+- Multi-year comparison
+- Predictive forecasting
+- Risk & anomaly detection
+- Executive insights
+- Exportable reports
 
-- HHS Care load mein significant reduction hua hai 2025 mein (peak ~11,000 se ~2,500 tak)
-- 2024 highest capacity pressure period tha
-- 2025 mein system stability aur discharge efficiency mein improvement dikha
+The dashboard is designed to support data-driven decision making for capacity planning and operational monitoring.
 
-## 🛠 Tech Stack
+---
 
-- Python, Pandas, Plotly, Streamlit
-- Scikit-learn (Forecasting)
+# 🚀 Features
+
+### 📊 Dashboard Overview
+- Professional KPI Cards
+- Interactive Sidebar Filters
+- Multi-Year Data Filtering
+- Responsive Layout
+
+### 📈 Data Visualization
 - Time Series Analysis
+- Multi-Year Comparison
+- Monthly Heatmaps
+- Correlation Heatmap
+- Trend Analysis
 
-## 🚀 How to Run Locally
+### 🤖 Machine Learning
+- Polynomial Regression Forecasting
+- 90-Day Load Prediction
+- Confidence Band Visualization
+
+### 🚨 Risk Analytics
+- Rolling Mean Analysis
+- Rolling Standard Deviation
+- Risk Score Calculation
+- High Risk Day Detection
+- Severity Classification
+- Risk Distribution Charts
+
+### 📋 Executive Dashboard
+- Executive Summary
+- Capacity Utilization
+- Performance Score
+- Recommendation Engine
+- Monthly Performance Review
+
+### 📥 Export Center
+- Filtered Dataset Export
+- Statistical Summary Export
+- Correlation Matrix Export
+- CSV Downloads
+
+---
+
+# 🖥 Dashboard Modules
+
+- KPI Dashboard
+- Main Trends
+- Multi-Year Comparison
+- Advanced Forecasting
+- Heatmaps & Data Quality
+- Risk & Anomaly Dashboard
+- Executive Intelligence Dashboard
+- Export Center
+
+---
+
+# 🛠 Technology Stack
+
+- Python
+- Streamlit
+- Pandas
+- NumPy
+- Plotly
+- Scikit-Learn
+- Machine Learning
+- Linear Regression
+- Polynomial Regression
+
+---
+
+# 📂 Project Structure
+
+```
+UAC-Care-Load-Analytics/
+│
+├── dashboard/
+│   └── app.py
+│
+├── data/
+│   └── cleaned_uac_data.csv
+│
+├── screenshots/
+│
+├── README.md
+│
+└── requirements.txt
+```
+
+---
+
+# 📦 Installation
+
+Clone the repository
 
 ```bash
-cd dashboard
+git clone https://github.com/yourusername/UAC-Care-Load-Analytics.git
+```
+
+Go to project directory
+
+```bash
+cd UAC-Care-Load-Analytics
+```
+
+Install dependencies
+
+```bash
 pip install -r requirements.txt
-streamlit run app.py
+```
+
+Run Streamlit
+
+```bash
+streamlit run dashboard/app.py
+```
+
+---
+
+# 📊 Dashboard Preview
+
+## Home Dashboard
+
+(Add Screenshot Here)
+
+---
+
+## Forecast Dashboard
+
+(Add Screenshot Here)
+
+---
+
+## Risk Dashboard
+
+(Add Screenshot Here)
+
+---
+
+## Executive Dashboard
+
+(Add Screenshot Here)
+
+---
+
+## Export Center
+
+(Add Screenshot Here)
+
+---
+
+# 📈 Key Performance Indicators
+
+- Total System Load
+- Children in HHS Care
+- Net Intake
+- Rolling Average
+- Forecast Load
+- Risk Score
+- Capacity Utilization
+- Performance Rating
+
+---
+
+# 📑 Machine Learning
+
+The forecasting module uses Polynomial Regression to estimate future system load based on historical trends.
+
+Forecast includes:
+
+- Future Load Prediction
+- Confidence Band
+- Trend Visualization
+
+---
+
+# 📊 Risk Detection
+
+Risk analysis includes:
+
+- Rolling Mean
+- Rolling Standard Deviation
+- Automatic Anomaly Detection
+- Severity Classification
+- Risk Score Calculation
+
+---
+
+# 🎯 Project Highlights
+
+- Interactive Dashboard
+- Real-Time Filtering
+- Machine Learning Forecast
+- Executive Analytics
+- Export Reports
+- Modern UI
+- Dark Theme
+- Responsive Charts
+
+---
+
+# 👨‍💻 Developer
+
+**Narendra Suthar**
+
+B.Tech – Artificial Intelligence & Data Science
+
+Unified Mentor Internship Project
+
+---
+
+# 📄 License
+
+This project is developed for educational and internship purposes.
+
+---
+
+## ⭐ If you found this project useful, please consider giving it a Star on GitHub!
