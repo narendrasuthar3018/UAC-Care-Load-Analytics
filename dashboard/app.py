@@ -130,18 +130,32 @@ st.caption("Developed by Narendra Suthar | Unified Mentor")
 @st.cache_data
 
 @st.cache_data
+@st.cache_data
+@st.cache_data
 def load_data():
-
-    BASE_DIR = Path(__file__).resolve().parent.parent
-
-    DATA_FILE = BASE_DIR / "data" / "cleaned_uac_data.csv"
-
-    df = pd.read_csv(DATA_FILE)
-
+    """Robust data loading for both local and Streamlit Cloud"""
+    possible_paths = [
+        "data/cleaned_uac_data.csv",           # Streamlit Cloud
+        "../data/cleaned_uac_data.csv",        # Local from dashboard
+        "cleaned_uac_data.csv",                # Root
+        "/mount/src/uac-care-load-analytics/data/cleaned_uac_data.csv"  # Cloud backup
+    ]
+    
+    for path in possible_paths:
+        try:
+            df = pd.read_csv(path)
+            st.success(f"Loaded data from: {path}")
+            break
+        except:
+            continue
+    else:
+        st.error("Could not find cleaned_uac_data.csv. Please check file location.")
+        st.stop()
+    
     df["Date"] = pd.to_datetime(df["Date"])
-
     df["Year"] = df["Date"].dt.year
-
+    df["Month"] = df["Date"].dt.month_name()
+    df["Quarter"] = df["Date"].dt.quarter
     return df
 
 df = load_data()
@@ -160,7 +174,11 @@ selected_year = st.sidebar.multiselect(
     years,
     default=years
 )
+df["Date"] = pd.to_datetime(df["Date"])
+df["Year"] = df["Date"].dt.year
+df["Month"] = df["Date"].dt.month_name()
 
+months = list(df["Month"].unique())
 months = list(df["Month"].unique())
 
 selected_month = st.sidebar.multiselect(
