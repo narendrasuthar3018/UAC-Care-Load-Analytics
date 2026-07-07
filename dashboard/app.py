@@ -21,7 +21,8 @@ st.title("🛡️ UAC System Capacity & Care Load Analytics")
 st.markdown("**Developed by: Narendra Suthar | Unified Mentor**")
 st.caption("Professional Analytics Dashboard | Real-time Insights & Forecasting")
 
-df = pd.read_csv('../data/cleaned_uac_data.csv')
+# df = pd.read_csv('../data/cleaned_uac_data.csv')
+df = pd.read_csv('data/cleaned_uac_data.csv')
 df['Date'] = pd.to_datetime(df['Date'])
 df['Year'] = df['Date'].dt.year
 
